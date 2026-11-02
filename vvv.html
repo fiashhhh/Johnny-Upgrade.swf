@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>johnnyupgrad</title>
+    <script src="https://unpkg.com"></script>
+</head>
+<body>
+    <div id="player"></div>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            "autoplay": "on",
+            "unmuteOverlay": "hidden"
+        };
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("player");
+            container.appendChild(player);
+            player.load("https://github.com/fiashhhh/Johnny-Upgrade.swf"); // Replace with your SWF filename
+        });
+    </script>
+</body>
+</html>
